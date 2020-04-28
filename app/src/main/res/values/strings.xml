@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">blockone-onboarding</string>
+    <string name="main_title">Hello to Blockone Onboarding\n Press the button to fetch blocks</string>
+    <string name="fetch_button">Fetch</string>
 </resources>

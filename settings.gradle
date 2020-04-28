@@ -1,2 +1,3 @@
 rootProject.name='blockone-onboarding'
 include ':app'
+include ':core'
