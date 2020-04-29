@@ -12,9 +12,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.blockone_onboarding.R
 import com.google.android.material.navigation.NavigationView
 import dagger.android.AndroidInjection
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.support.AndroidSupportInjection
-import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
