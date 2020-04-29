@@ -5,7 +5,7 @@ import com.example.blockone_onboarding.domain.datasource.BlockInfoRemoteDataSour
 import com.example.blockone_onboarding.domain.model.Block
 import com.example.blockone_onboarding.domain.model.BlockInfo
 import com.example.blockone_onboarding.domain.repository.BlockRepository
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 import javax.inject.Inject
 
 class BlockRepositoryImpl @Inject constructor(

@@ -1,7 +1,7 @@
 package com.example.blockone_onboarding.domain.datasource
 
 import com.example.blockone_onboarding.domain.model.BlockInfo
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 
 interface BlockInfoRemoteDataSource {
 

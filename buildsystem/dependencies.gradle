@@ -8,16 +8,16 @@ ext {
     androidXLegacySupport = '1.0.0'
     lifecycle_version = '2.2.0'
 
-    rxJavaVersion = '3.0.2'
-    rxJavaAndroidVersion = '3.0.0'
+    rxJavaVersion = '2.2.8'
+    rxJavaAndroidVersion = '2.1.0'
     retrofitVersion = '2.8.1'
     gsonVersion = '2.0.1'
     daggerAndroidVersion = '2.27'
     httpLoggingInterceptorVersion = '4.5.0'
 
     mainDependencies = [
-            rxJava : "io.reactivex.rxjava3:rxjava:$rxJavaVersion",
-            rxAndroid : "io.reactivex.rxjava3:rxandroid:$rxJavaAndroidVersion",
+            rxJava : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxAndroid : "io.reactivex.rxjava2:rxandroid:$rxJavaAndroidVersion",
             retroFit : "com.squareup.retrofit2:retrofit:$retrofitVersion",
             retroFitRxJava : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
             retroFitGson : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
