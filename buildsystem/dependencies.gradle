@@ -12,6 +12,7 @@ ext {
     rxJavaAndroidVersion = '2.1.0'
     retrofitVersion = '2.8.1'
     gsonVersion = '2.0.1'
+    roomVersion = '2.2.5'
     daggerAndroidVersion = '2.27'
     httpLoggingInterceptorVersion = '4.5.0'
 
@@ -23,11 +24,15 @@ ext {
             retroFitGson : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
             retroFitHttpInterceptor : "com.squareup.okhttp3:logging-interceptor:$httpLoggingInterceptorVersion",
             daggerAndroid : "com.google.dagger:dagger-android:$daggerAndroidVersion",
-            daggerAndroidSupport : "com.google.dagger:dagger-android-support:$daggerAndroidVersion"
+            daggerAndroidSupport : "com.google.dagger:dagger-android-support:$daggerAndroidVersion",
+            room : "androidx.room:room-runtime:$roomVersion",
+            roomKtx: "androidx.room:room-ktx:$roomVersion",
+            roomRx : "androidx.room:room-rxjava2:$roomVersion"
     ]
 
     kaptDependencies = [
             daggerCompiler : "com.google.dagger:dagger-compiler:$daggerAndroidVersion",
-            daggerAndroidProcessor : "com.google.dagger:dagger-android-processor:$daggerAndroidVersion"
+            daggerAndroidProcessor : "com.google.dagger:dagger-android-processor:$daggerAndroidVersion",
+            roomCompiler : "androidx.room:room-compiler:$roomVersion"
     ]
 }

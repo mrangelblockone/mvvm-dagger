@@ -1,85 +1,85 @@
-package com.example.blockone_onboarding.data.model
+package com.example.blockone_onboarding.data.model.remote
 
 import com.google.gson.annotations.SerializedName
 
 data class BlockRemote(
 
-	@field:SerializedName("ref_block_prefix")
+    @field:SerializedName("ref_block_prefix")
 	val refBlockPrefix: Long? = null,
 
-	@field:SerializedName("new_producers")
+    @field:SerializedName("new_producers")
 	val newProducers: Any? = null,
 
-	@field:SerializedName("previous")
+    @field:SerializedName("previous")
 	val previous: String? = null,
 
-	@field:SerializedName("schedule_version")
+    @field:SerializedName("schedule_version")
 	val scheduleVersion: Int? = null,
 
-	@field:SerializedName("producer_signature")
+    @field:SerializedName("producer_signature")
 	val producerSignature: String? = null,
 
-	@field:SerializedName("transactions")
+    @field:SerializedName("transactions")
 	val transactions: List<TransactionsItem?>? = null,
 
-	@field:SerializedName("confirmed")
+    @field:SerializedName("confirmed")
 	val confirmed: Int? = null,
 
-	@field:SerializedName("block_num")
+    @field:SerializedName("block_num")
 	val blockNum: Int? = null,
 
-	@field:SerializedName("producer")
+    @field:SerializedName("producer")
 	val producer: String? = null,
 
-	@field:SerializedName("transaction_mroot")
+    @field:SerializedName("transaction_mroot")
 	val transactionMroot: String? = null,
 
-	@field:SerializedName("id")
+    @field:SerializedName("id")
 	val id: String? = null,
 
-	@field:SerializedName("action_mroot")
+    @field:SerializedName("action_mroot")
 	val actionMroot: String? = null,
 
-	@field:SerializedName("timestamp")
+    @field:SerializedName("timestamp")
 	val timestamp: String? = null
 )
 
 data class TransactionsItem(
 
-	@field:SerializedName("net_usage_words")
+    @field:SerializedName("net_usage_words")
 	val netUsageWords: Int? = null,
 
-	@field:SerializedName("trx")
+    @field:SerializedName("trx")
 	val trx: Trx? = null,
 
-	@field:SerializedName("cpu_usage_us")
+    @field:SerializedName("cpu_usage_us")
 	val cpuUsageUs: Int? = null,
 
-	@field:SerializedName("status")
+    @field:SerializedName("status")
 	val status: String? = null
 )
 
 data class Trx(
 
-	@field:SerializedName("packed_trx")
+    @field:SerializedName("packed_trx")
 	val packedTrx: String? = null,
 
-	@field:SerializedName("packed_context_free_data")
+    @field:SerializedName("packed_context_free_data")
 	val packedContextFreeData: String? = null,
 
-	@field:SerializedName("id")
+    @field:SerializedName("id")
 	val id: String? = null,
 
-	@field:SerializedName("compression")
+    @field:SerializedName("compression")
 	val compression: String? = null,
 
-	@field:SerializedName("signatures")
+    @field:SerializedName("signatures")
 	val signatures: List<String?>? = null,
 
-	@field:SerializedName("transaction")
+    @field:SerializedName("transaction")
 	val transaction: Transaction? = null,
 
-	@field:SerializedName("context_free_data")
+    @field:SerializedName("context_free_data")
 	val contextFreeData: List<Any?>? = null
 )
 
@@ -109,16 +109,16 @@ data class Transaction(
 
 data class ActionsItem(
 
-	@field:SerializedName("authorization")
+    @field:SerializedName("authorization")
 	val authorization: List<AuthorizationItem?>? = null,
 
-	@field:SerializedName("data")
+    @field:SerializedName("data")
 	val data: String? = null,
 
-	@field:SerializedName("name")
+    @field:SerializedName("name")
 	val name: String? = null,
 
-	@field:SerializedName("account")
+    @field:SerializedName("account")
 	val account: String? = null
 )
 

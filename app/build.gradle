@@ -56,6 +56,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
+
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
     implementation libs.daggerAndroid
@@ -72,6 +73,12 @@ dependencies {
 
     annotationProcessor kaptLibs.daggerCompiler,
             kaptLibs.daggerAndroidProcessor
+
+    implementation libs.room
+    implementation libs.roomKtx
+    implementation libs.roomRx
+
+    kapt kaptLibs.roomCompiler
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

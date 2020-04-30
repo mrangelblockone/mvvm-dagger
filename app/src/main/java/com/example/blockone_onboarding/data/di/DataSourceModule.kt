@@ -6,7 +6,7 @@ import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
 
-@Module(includes = [MappersModule::class, ServiceModule::class])
+@Module(includes = [MappersModule::class, ServiceModule::class, PersistenceModule::class])
 internal abstract class DataSourceModule {
 
     @Binds

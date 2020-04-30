@@ -1,7 +1,7 @@
 package com.example.blockone_onboarding.data.datasource
 
 import com.example.blockone_onboarding.data.mapper.BaseRemoteMapper
-import com.example.blockone_onboarding.data.model.BlockInfoRemote
+import com.example.blockone_onboarding.data.model.remote.BlockInfoRemote
 import com.example.blockone_onboarding.data.service.BlockApi
 import com.example.blockone_onboarding.domain.datasource.BlockInfoRemoteDataSource
 import com.example.blockone_onboarding.domain.model.BlockInfo
