@@ -3,6 +3,7 @@ package com.example.blockone_onboarding.data.di
 import android.content.Context
 import androidx.room.Room
 import com.example.blockone_onboarding.data.persistence.BlockOneDataBase
+import com.example.blockone_onboarding.data.persistence.dao.BlockInfoDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -19,5 +20,14 @@ internal object PersistenceModule {
             BlockOneDataBase::class.java,
             "blockone.db"
         ).build()
+    }
+
+    @JvmStatic
+    @Singleton
+    @Provides
+    fun providesBlockInfoDao(
+        database: BlockOneDataBase
+    ): BlockInfoDao {
+        return database.blockInfoDao()
     }
 }

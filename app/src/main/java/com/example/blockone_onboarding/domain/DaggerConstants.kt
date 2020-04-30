@@ -1,4 +1,4 @@
-package com.example.blockone_onboarding.di
+package com.example.blockone_onboarding.domain
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

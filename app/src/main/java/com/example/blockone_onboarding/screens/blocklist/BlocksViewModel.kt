@@ -15,4 +15,9 @@ class BlocksViewModel @Inject constructor(
         return repository.getBlockInfo()
             .subscribeOn(Schedulers.io())
     }
+
+    fun getSavedBlockInfo(): Single<BlockInfo> {
+        return repository.getSavedBlockInfo()
+            .subscribeOn(Schedulers.io())
+    }
 }

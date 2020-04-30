@@ -24,10 +24,22 @@ class BlockListFragment : Fragment() {
         viewModel.getBlockInfo()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                    Toast.makeText(context, it.headBlockId, Toast.LENGTH_LONG).show()
+                    fetchFromDB()
                 }, {
                     Toast.makeText(context, it.message, Toast.LENGTH_LONG).show()
-                }
-            )
+                })
+
+
+    }
+
+    @SuppressLint("CheckResult")
+    private fun fetchFromDB() {
+        viewModel.getSavedBlockInfo()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                Toast.makeText(context, "local: $it.headBlockId", Toast.LENGTH_LONG).show()
+            }, {
+                Toast.makeText(context, it.message, Toast.LENGTH_LONG).show()
+            })
     }
 }

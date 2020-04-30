@@ -8,4 +8,5 @@ interface BlockRepository {
 
     fun getBlockInfo(): Single<BlockInfo>
     fun getBlock(): Single<Block>
+    fun getSavedBlockInfo(): Single<BlockInfo>
 }
