@@ -7,7 +7,6 @@ import com.example.blockone_onboarding.domain.model.Block
 import com.example.blockone_onboarding.domain.model.BlockInfo
 import com.example.blockone_onboarding.domain.repository.BlockRepository
 import io.reactivex.Single
-import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class BlockRepositoryImpl @Inject constructor(

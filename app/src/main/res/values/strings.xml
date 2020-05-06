@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">blockone-onboarding</string>
-    <string name="main_title">Hello to Blockone Onboarding\n Press the button to fetch blocks</string>
+    <string name="text_main_screen">Hello to Blockone Onboarding\n Press the button to start fetching blocks</string>
     <string name="fetch_button">Fetch</string>
+    <string name="home_title">Home Block</string>
+    <string name="list_title">Block list</string>
 </resources>

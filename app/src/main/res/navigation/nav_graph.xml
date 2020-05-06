@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/block_list_fragment">
+    app:startDestination="@id/home_block_dest">
 
     <fragment
-        android:id="@+id/block_list_fragment"
-        android:name="com.example.blockone_onboarding.screens.blocklist.BlockListFragment"
-        android:label="Block Info">
-<!--        <action-->
-<!--            android:id="@+id/action_taskDetailFragment_to_addEditTaskFragment"-->
-<!--            app:destination="@id/addEditTaskFragment" />-->
-<!--        <argument-->
-<!--            android:name="taskId"-->
-<!--            app:argType="string" />-->
-<!--        <action-->
-<!--            android:id="@+id/action_taskDetailFragment_to_tasksFragment"-->
-<!--            app:destination="@id/tasksFragment" />-->
+        android:id="@+id/home_block_dest"
+        android:name="com.example.blockone_onboarding.screens.homeblock.HomeBlockFragment"
+        android:label="@string/home_title"
+        tools:layout="@layout/home_block_fragment">
+
+        <action
+            android:id="@+id/action_fetch_blocks"
+            app:destination="@id/block_list_dest" />
+
     </fragment>
 
-    <argument
-        android:name="userMessage"
-        android:defaultValue="0" />
+    <fragment
+        android:id="@+id/block_list_dest"
+        android:name="com.example.blockone_onboarding.screens.blocklist.BlockListFragment"
+        android:label="@string/list_title"
+        tools:layout="@layout/block_list_fragment">
+
+        <argument
+            android:name="headBlockNum"
+            app:argType="string"
+            android:defaultValue="0" />
+
+    </fragment>
+
 </navigation>

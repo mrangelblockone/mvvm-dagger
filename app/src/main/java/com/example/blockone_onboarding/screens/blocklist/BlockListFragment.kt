@@ -1,45 +1,29 @@
 package com.example.blockone_onboarding.screens.blocklist
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import dagger.android.support.AndroidSupportInjection
-import io.reactivex.android.schedulers.AndroidSchedulers
-import javax.inject.Inject
+import com.example.blockone_onboarding.R
 
 class BlockListFragment : Fragment() {
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
-
-    private val viewModel by viewModels<BlocksViewModel> { viewModelFactory }
-
-    @SuppressLint("CheckResult")
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidSupportInjection.inject(this)
         super.onCreate(savedInstanceState)
-        viewModel.getBlockInfo()
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                    fetchFromDB()
-                }, {
-                    Toast.makeText(context, it.message, Toast.LENGTH_LONG).show()
-                })
-
-
     }
 
-    @SuppressLint("CheckResult")
-    private fun fetchFromDB() {
-        viewModel.getSavedBlockInfo()
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                Toast.makeText(context, "local: $it.headBlockId", Toast.LENGTH_LONG).show()
-            }, {
-                Toast.makeText(context, it.message, Toast.LENGTH_LONG).show()
-            })
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        setHasOptionsMenu(true)
+        return inflater.inflate(R.layout.block_list_fragment, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 }
